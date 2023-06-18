@@ -20,6 +20,15 @@
             }
         }
 
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-100vh);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+
         body {
             background: linear-gradient(45deg, #ff99cc, #ff6699, #ff33cc, #ff66ff);
             color: #ffffff;
@@ -100,6 +109,48 @@
             left: 75%;
             background-color: #ff6699;
         }
+
+        .confetti {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            opacity: 0.7;
+            animation: confetti-fall 5s linear infinite;
+        }
+
+        .confetti.dot {
+            width: 16px;
+            height: 16px;
+        }
+
+        .confetti.string {
+            width: 4px;
+            height: 60px;
+        }
+
+        .confetti.rainbow-1 {
+            background-color: #ff99cc;
+        }
+
+        .confetti.rainbow-2 {
+            background-color: #ff6699;
+        }
+
+        .confetti.rainbow-3 {
+            background-color: #ff33cc;
+        }
+
+        .confetti.rainbow-4 {
+            background-color: #ff66ff;
+        }
+
+        .confetti.rainbow-5 {
+            background-color: #ffff00;
+        }
+
+        .confetti.rainbow-6 {
+            background-color: #00ff00;
+        }
     </style>
 </head>
 <body>
@@ -120,5 +171,24 @@
 <div class="decoration"></div>
 <div class="decoration"></div>
 <div class="decoration"></div>
+
+<!-- Confetti -->
+<script>
+    function createConfetti() {
+        const colors = ["rainbow-1", "rainbow-2", "rainbow-3", "rainbow-4", "rainbow-5", "rainbow-6"];
+        const types = ["dot", "string"];
+
+        for (let i = 0; i < 100; i++) {
+            const confetti = document.createElement("div");
+            confetti.className = `confetti ${types[Math.floor(Math.random() * types.length)]} ${colors[Math.floor(Math.random() * colors.length)]}`;
+            confetti.style.left = Math.random() * 100 + "vw";
+            confetti.style.animationDelay = Math.random() * 5 + "s";
+            document.body.appendChild(confetti);
+        }
+    }
+
+    createConfetti();
+</script>
+
 </body>
 </html>
