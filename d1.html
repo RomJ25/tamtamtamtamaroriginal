@@ -1,125 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Birthday Challenge</title>
     <style>
-      @keyframes explode {
-        0% {
-          transform: scale(1);
-          opacity: 1;
+        @keyframes explode {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
-        50% {
-          transform: scale(1.2);
-          opacity: 0.8;
+
+        body {
+            background: linear-gradient(45deg, #ff99cc, #ff6699, #ff33cc, #ff66ff);
+            color: #ffffff;
+            font-family: "Arial", sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            overflow: hidden;
         }
-        100% {
-          transform: scale(1);
-          opacity: 1;
+
+        h1 {
+            font-size: 100px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: explode 1s ease-in-out infinite;
+            color: #000000;
         }
-      }
 
-      body {
-        background: linear-gradient(45deg, #ff99cc, #ff6699, #ff33cc, #ff66ff);
-        color: #ffffff;
-        font-family: "Arial", sans-serif;
-        text-align: center;
-        margin: 0;
-        padding: 20px;
-        overflow: hidden;
-      }
+        h2 {
+            font-size: 60px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #ff99cc;
+        }
 
-      h1 {
-        font-size: 100px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        animation: explode 1s ease-in-out infinite;
-        color: #000000;
-      }
+        p {
+            font-size: 36px;
+            margin-top: 30px; /* Increased spacing between paragraphs */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
 
-      h2 {
-        font-size: 60px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        color: #ff99cc;
-      }
+        .quote {
+            font-size: 48px;
+            font-style: italic;
+            color: #ff99cc;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-top: 40px;
+        }
 
-      p {
-        font-size: 36px;
-        margin-top: 30px; /* Increased spacing between paragraphs */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-      }
+        .decoration {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            animation: float 3s linear infinite;
+        }
 
-      .quote {
-        font-size: 48px;
-        font-style: italic;
-        color: #ff99cc;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        margin-top: 40px;
-      }
+        .decoration:nth-child(1) {
+            top: 10%;
+            left: 5%;
+            background-color: #ff99cc;
+        }
 
-      .decoration {
-        position: absolute;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        animation: float 3s linear infinite;
-      }
+        .decoration:nth-child(2) {
+            top: 25%;
+            left: 15%;
+            background-color: #ff6699;
+        }
 
-      .decoration:nth-child(1) {
-        top: 10%;
-        left: 5%;
-        background-color: #ff99cc;
-      }
+        .decoration:nth-child(3) {
+            top: 40%;
+            left: 30%;
+            background-color: #ff33cc;
+        }
 
-      .decoration:nth-child(2) {
-        top: 25%;
-        left: 15%;
-        background-color: #ff6699;
-      }
+        .decoration:nth-child(4) {
+            top: 55%;
+            left: 45%;
+            background-color: #ff66ff;
+        }
 
-      .decoration:nth-child(3) {
-        top: 40%;
-        left: 30%;
-        background-color: #ff33cc;
-      }
+        .decoration:nth-child(5) {
+            top: 70%;
+            left: 60%;
+            background-color: #ff99cc;
+        }
 
-      .decoration:nth-child(4) {
-        top: 55%;
-        left: 45%;
-        background-color: #ff66ff;
-      }
-
-      .decoration:nth-child(5) {
-        top: 70%;
-        left: 60%;
-        background-color: #ff99cc;
-      }
-
-      .decoration:nth-child(6) {
-        top: 85%;
-        left: 75%;
-        background-color: #ff6699;
-      }
+        .decoration:nth-child(6) {
+            top: 85%;
+            left: 75%;
+            background-color: #ff6699;
+        }
     </style>
-  </head>
-  <body>
-    <h1 style="color: black">HAPPY FUCKING BIRTHDAY!!!</h1>
-    <h2>WOHAAAAAAAAAAAAAA!!</h2>
-    <p>Today you are entering a mission to your desired hope! The present!!!</p>
-    <p>I know you're ready for this, and just as they say:</p>
-    <p class="quote">
-      "Our world is a cipher, waiting to be decoded and understood." R.J
-    </p>
-    <p>And here is your second clue, good luck!</p>
-    <audio
-      src="https://github.com/RomJ25/tamtamtamtamaroriginal/main/Audio%20ai.mp3"
-      controls
-    ></audio>
-    <div class="decoration"></div>
-    <div class="decoration"></div>
-    <div class="decoration"></div>
-    <div class="decoration"></div>
-    <div class="decoration"></div>
-    <div class="decoration"></div>
-  </body>
+</head>
+<body>
+<h1 style="color: black">HAPPY FUCKING BIRTHDAY!!!</h1>
+<h2>WOHAAAAAAAAAAAAAA!!</h2>
+<p>Today you are entering a mission to your desired hope! The present!!!</p>
+<p>I know you're ready for this, and just as they say:</p>
+<p class="quote">
+    "Our world is a cipher, waiting to be decoded and understood." R.J
+</p>
+<p>And here is your second clue, good luck!</p>
+<audio controls>
+    <source src="https://github.com/RomJ25/tamtamtamtamaroriginal/blob/99608d2f31ff58aca0db802d34fe5088cecffbe7/Audio%20ai.mp3?raw=true" type="audio/mp3">
+</audio>
+<div class="decoration"></div>
+<div class="decoration"></div>
+<div class="decoration"></div>
+<div class="decoration"></div>
+<div class="decoration"></div>
+<div class="decoration"></div>
+</body>
 </html>
